@@ -1,0 +1,32 @@
+# 只能准星破坏方块 OnlyFrontSightBreakBed 插件
+# 作者：Month_Light
+
+# 插件版本号
+version: 1.0
+
+# 插件的前缀
+Prefix: '&f[&cOFSBB&f] '
+
+# 玩家破坏床方块疑似作弊被阻止的消息
+BreakCancelledWarn: '&6检测到你疑似使用作弊破坏床方块!!!'
+
+# 疑似破坏次数统计和处理
+StatisticsHandler:
+
+  # 是否开启此功能
+  Enable: true
+
+  # 当破坏次数统计超过此值将视为疑似作弊
+  Value: 10
+
+  # 当超时统计次数值进行的处理
+  # 方式:
+  #   CMD: 执行自定义命令 (控制台执行)
+  #     例: 'CMD:kill %player%'
+  #   KICK: 踢出疑似作弊的玩家
+  #     例: 'KICK:检测到疑似使用作弊破坏床方块, 已将你踢出!'
+  #   BAN: 封禁疑似作弊的玩家
+  #     例: 'BAN:检测到疑似使用作弊破坏床方块, 已将你封禁!'
+  Handler:
+    - 'CMD:say 检测到玩家 %player% 疑似使用作弊破坏床方块, 已踢出!'
+    - 'KICK:检测到疑似使用作弊破坏床方块, 已将你踢出!'

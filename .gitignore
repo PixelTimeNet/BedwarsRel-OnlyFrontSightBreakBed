@@ -1,0 +1,13 @@
+*.class
+
+# Package Files #
+*.jar
+*.war
+*.ear
+
+# ignore intellij idea setting folder
+/.idea/
+/.metadata/
+/doc/
+/META-INF/
+*.iml
